@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed;  /* Bug: overlaps content with no padding for sections */
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 20px; /* Bug: not enough padding for fixed header offset */
+  min-height: 100vh;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Bug: not responsive - looks cramped on mobile */
+  gap: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.project-card {
+  background-color: #f4f4f4;
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%; /* Bug: too wide for mobile */
+  box-shadow: 0 0 5px #ccc;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Missing media queries for mobile responsiveness */
